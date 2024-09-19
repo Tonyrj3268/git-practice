@@ -1,0 +1,16 @@
+## 安裝的 nodejs 版本
+
+我透過 `nvm ls-remote` 觀察到最新的 LTS 版本是 v20.17.0，所以我安裝的版本是 v20.17.0
+
+```bash
+# 安裝 LTS 版本
+nvm install --lts
+```
+
+- 另外，我注意到 LTS 通常會包含很多小版本，這些小版本通常是為了修正一些 bug 或者是安全性問題以及向後兼容。
+- 由於多數人會使用 Node.js 作為未來的作業環境，所以我目前會使用 Node.js，否則我會考慮使用我比較擅長的 Python 來做開發。
+
+## nvm 與 npm 分別是什麼
+
+- **nvm**: Node Version Manager，是 Node.js 的版本管理工具。它可以幫助我們下載或刪除 Node.js 的版本，以及在不同版本之間做切換，作用類似於 Python 的 pyenv。
+- **npm**: Node Package Manager，是 Node.js 的套件管理工具。它幫助我們簡化了安裝、更新、刪除套件的過程（否則我們可能需要直接下載原始碼），並且可以幫助我們管理各個套件之間的依賴問題，作用類似於 Python 的 pip。
