@@ -1,0 +1,20 @@
+{
+  "name": "git-practice",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "My name is LIN CHIA-CHENG, and I am on a journey to acquire basic system design knowledge. This repository will serve as a collection of my learnings, homeworks, projects, and resources related to this class. I aim to understand the fundamental principles and best practices that underpin scalable and efficient systems.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tonyrj3268/git-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tonyrj3268/git-practice/issues"
+  },
+  "homepage": "https://github.com/Tonyrj3268/git-practice#readme"
+}
