@@ -2,13 +2,16 @@
 Promise 是一個表示尚未完成但最終會完成（或失敗）的操作結果的對象。
 這個操作可以是異步的（例如 API 請求、計時器等）。
 當你調用一個返回 Promise 的函數時，這個 Promise 對象將在操作完成後被 "resolved"（成功）或 "rejected"（失敗）。
+此函式的參數包含 resolve, reject，這兩個方法分別代表成功與失敗的回傳結果，
+特別注意這兩個僅能回傳其中之一，回傳後表示此 Promise 事件結束。
+resolve用.then取得結果，reject用.catch取得結果。
 */
 
 function doJob(job, time) {
-  return new Promise((cb) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       let now = new Date();
-      cb(`完成工作 ${job} at ${now.toISOString()}`);
+      resolve(`完成工作 ${job} at ${now.toISOString()}`);
     }, time);
   });
 }
@@ -31,6 +34,9 @@ doJob("刷牙", 1000)
   })
   .then((data) => {
     console.log(data);
+  })
+  .catch((fail) => {
+    console.log(fail);
   });
 
 /*
