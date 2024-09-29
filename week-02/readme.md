@@ -31,4 +31,15 @@ nvm install --lts
 
 - 網路上有兩大做法
   1. 重寫 `console.log`來捕獲輸出並儲存進行測試。
-  2. 使用`Jest`或是`Mocha`等測試框架，本質上也是重寫`console.log`。
+  2. 使用`Jest`或是`Mocha`等測試框架，本質上也是替換了`console.log`來進行監視。
+
+```javascript
+const logSpy = jest.spyOn(console, "log"); // 監視 console.log
+
+console.log("5, 8"); // 調用 console.log
+
+expect(logSpy).toHaveBeenCalled(); // 驗證 console.log 是否被調用
+expect(logSpy).toHaveBeenCalledWith("5, 8"); // 驗證調用時的參數
+
+logSpy.mockRestore(); // 恢復原始的 console.log
+```
