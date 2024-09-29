@@ -19,6 +19,17 @@ function sum2(ary) {
 assert.strictEqual(sum1([1, 5, 3, 2]), 11);
 assert.strictEqual(sum2([1, 5, 3, 2]), 11);
 
+//補充 map()
+function sum_with_map(ary) {
+  let cumulativeSum = 0;
+  let result = ary.map((num) => {
+    cumulativeSum += num; // 將前一項累加到當前項
+    return cumulativeSum;
+  });
+  return result.pop();
+}
+assert.strictEqual(sum_with_map([1, 5, 3, 2]), 11);
+
 // 挑戰題: 如果 sum 函式的 input 是 n，然後要回傳 1 + 2 + 3 + … + n 的話，一樣不能用 for, while 寫，要怎麼做？
 function sum3(n) {
   // 遞迴
