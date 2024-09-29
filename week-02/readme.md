@@ -18,7 +18,7 @@ nvm install --lts
 
 ## 作業要求是以 array 函式來完成 sum，你選擇用 reduce，而不是其他 array 函式，為什麼？有研究過其他 array 函式嗎？為什麼不是選其他的？
 
-- 我是從`[MDN](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)`這裡尋找 array 的實體方法，並且找到了`reduce`這個方法，覺得這個方式比較特別，且他的範例也是 array 元素加總，所以我選擇使用`reduce`。
+- 我是從[MDN](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)這裡尋找 array 的實體方法，並且找到了`reduce`這個方法，覺得這個方式比較特別，且他的範例也是 array 元素加總，所以我選擇使用`reduce`。
 - 我有看到`forEach`函式，但是題目要求不要用 for 迴圈，所以我沒有選擇使用`forEach`。
 - 課堂上有人示範了`map`函式也可以達成，我將補充進`sum.js`裡。
 
